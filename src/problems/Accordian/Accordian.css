@@ -1,0 +1,10 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.accordian {
+  transition: all 1s ease;
+}
