@@ -1,9 +1,10 @@
-import Accordian from "./problems/Accordian/Accordian";
+import "./App.css";
+import JobBoard from "./problems/JobBoard.js/JobBoard";
 
 function App() {
   return (
     <div className="App">
-      <Accordian />
+      <JobBoard />
     </div>
   );
 }

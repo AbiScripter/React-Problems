@@ -29,7 +29,6 @@ const Accordian = () => {
       if (prev === index) {
         return null;
       }
-
       return index;
     });
   }

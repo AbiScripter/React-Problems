@@ -1,0 +1,23 @@
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.job {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.load-btn {
+  width: 20%;
+  background-color: gray;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  color: white;
+}
