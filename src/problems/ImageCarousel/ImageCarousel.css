@@ -1,0 +1,63 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.display-image-container {
+  position: relative;
+  margin-top: 10rem;
+  width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dots-dummy-wrapper {
+  background-color: rgb(0, 0, 0, 60%);
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: white !important;
+}
+
+.arrows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  padding: 0 10px;
+
+  img {
+    width: 20px;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 0.2rem;
+  }
+}

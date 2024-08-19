@@ -1,10 +1,10 @@
 import "./App.css";
-import JobBoard from "./problems/JobBoard.js/JobBoard";
+import ImageCarousel from "./problems/ImageCarousel/ImageCarousel";
 
 function App() {
   return (
     <div className="App">
-      <JobBoard />
+      <ImageCarousel />
     </div>
   );
 }
