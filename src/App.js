@@ -1,10 +1,10 @@
 import "./App.css";
-import ImageCarousel from "./problems/ImageCarousel/ImageCarousel";
+import Modal from "./problems/Modal/Modal";
 
 function App() {
   return (
     <div className="App">
-      <ImageCarousel />
+      <Modal />
     </div>
   );
 }
