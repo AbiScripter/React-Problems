@@ -1,10 +1,10 @@
 import "./App.css";
-import Modal from "./problems/Modal/Modal";
+import Traffic from "./TrafficLights/Traffic";
 
 function App() {
   return (
     <div className="App">
-      <Modal />
+      <Traffic />
     </div>
   );
 }
