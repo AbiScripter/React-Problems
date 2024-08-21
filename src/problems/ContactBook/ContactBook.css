@@ -1,0 +1,46 @@
+html,
+body,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  form,
+  > div {
+    border: 2px solid red;
+  }
+}
+
+button {
+  padding: 0.1rem 0.9rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  input {
+    padding: 0.2rem;
+  }
+}
+
+.contact-form {
+  padding: 0.3rem;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  span {
+    width: 9rem;
+  }
+}
