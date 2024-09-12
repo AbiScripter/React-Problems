@@ -1,0 +1,17 @@
+.option {
+  cursor: pointer;
+}
+
+.option.correct {
+  background-color: green;
+}
+
+.option.wrong {
+  background-color: red;
+}
+
+.score {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}

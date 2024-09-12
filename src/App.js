@@ -1,14 +1,10 @@
-import { Provider } from "react-redux";
 import "./App.css";
-import contactStore from "./problems/ContactBook/ContactStore";
-import ContactBook from "./problems/ContactBook/ContactBook";
+import Quiz from "./problems/Quiz/Quiz";
 
 function App() {
   return (
     <div className="App">
-      <Provider store={contactStore}>
-        <ContactBook />
-      </Provider>
+      <Quiz />
     </div>
   );
 }
