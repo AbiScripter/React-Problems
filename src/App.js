@@ -1,10 +1,10 @@
 import "./App.css";
-import JobBoard from "./problems/JobBoard.js/JobBoard";
+import MultiForm from "./problems/MultiStepForm/MultiStepForm";
 
 function App() {
   return (
     <div className="App">
-      <JobBoard />
+      <MultiForm />
     </div>
   );
 }
