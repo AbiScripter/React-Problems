@@ -1,10 +1,10 @@
 import "./App.css";
-import Quiz from "./problems/Quiz/Quiz";
+import JobBoard from "./problems/JobBoard.js/JobBoard";
 
 function App() {
   return (
     <div className="App">
-      <Quiz />
+      <JobBoard />
     </div>
   );
 }

@@ -26,6 +26,7 @@ const JobBoard = () => {
   //fetching data for each jobs
   async function fetchJobData(id) {
     try {
+      setIsLoading(true);
       const response = await fetch(
         `https://hacker-news.firebaseio.com/v0/item/${id}.json`
       );
@@ -36,35 +37,42 @@ const JobBoard = () => {
       setError(error.message);
       return null;
     } finally {
+      setIsLoading(false);
     }
   }
 
   useEffect(() => {
-    console.log(currentIndex);
     if (jobIds.length > 0 && currentIndex < jobIds.length) {
-      async function kk() {
+      async function fetchJobs() {
         setIsLoading(true);
-        let tempData = [];
-        for (let i = currentIndex; i < currentIndex + 5; i++) {
-          const data = await fetchJobData(jobIds[i]);
-          //only if the data is not null
-          if (data) {
-            tempData.push(data);
+        try {
+          // Create an array of promises
+          const promises = [];
+          for (
+            let i = currentIndex;
+            i < currentIndex + 4 && i < jobIds.length;
+            i++
+          ) {
+            promises.push(fetchJobData(jobIds[i]));
           }
+          // Wait for all promises to resolve
+          const jobs = await Promise.all(promises);
+          // Filter out any null results (in case of fetch errors)
+          const validJobs = jobs.filter((job) => job !== null);
+          setJobData((prev) => [...prev, ...validJobs]);
+        } catch (error) {
+          console.error("Error fetching jobs:", error);
+        } finally {
+          setIsLoading(false);
         }
-        setJobData((prev) => [...prev, ...tempData]);
-        setIsLoading(false);
       }
-      kk();
+      fetchJobs();
     }
   }, [jobIds, currentIndex]);
 
   function loadmore() {
-    setCurrentIndex((prev) => prev + 5);
+    setCurrentIndex((prev) => prev + 4);
   }
-
-  console.log(jobIds);
-  console.log(jobData);
 
   if (error) {
     return <h2>{error}</h2>;
