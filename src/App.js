@@ -1,10 +1,10 @@
 import "./App.css";
-import MultiForm from "./problems/MultiStepForm/MultiStepForm";
+import ProductsPage from "./problems/ProductsPage/ProductsPage";
 
 function App() {
   return (
     <div className="App">
-      <MultiForm />
+      <ProductsPage />
     </div>
   );
 }
